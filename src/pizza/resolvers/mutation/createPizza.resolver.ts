@@ -1,22 +1,16 @@
-import { Request, Response } from "express";
+import { Model } from "sequelize";
 
-import { Pizza } from "../../types/pizza";
+import { PizzaModel } from "../../pizza.model";
 
-const createPizzaResolver = (
+const createPizzaResolver = async (
   parent: any,
   args: any,
   contextValue: any,
   info: any
-): Pizza => {
-  const {
-    pizzaInput: { topping, price },
-  } = args;
-
-  console.log("🚀 ~ file: createPizza.resolver.ts:13 ~ price", price)
-  return {
-    topping,
-    price,
-  };
+): Promise<Model> => {
+  const { pizzaInput } = args;
+  const pizzaInstance = await PizzaModel.create(pizzaInput);
+  return pizzaInstance;
 };
 
 export { createPizzaResolver };
