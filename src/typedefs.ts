@@ -1,15 +1,15 @@
 // import typedefs like defined in pizza.typedefs
 
-import { pizzaDefinitions } from "./pizza/pizza.typedefs";
+import { pokeTeamDefinitions } from "./poketeam/typedefs";
 const typeDefs = `
   type Query{
-    ${pizzaDefinitions.queries}
+    ${pokeTeamDefinitions.queries}
   }
   type Mutation{
-    ${pizzaDefinitions.mutations}
+    ${pokeTeamDefinitions.mutations}
   }
   
-  ${pizzaDefinitions.types}
+  ${pokeTeamDefinitions.types}
 `;
 
 export { typeDefs };

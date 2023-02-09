@@ -1,15 +1,15 @@
 //import resolvers or each model inside source
 
-import { pizzaResolvers } from "./pizza/pizza.resolver";
+import { pokeTeamResolvers } from "./poketeam/resolvers";
 
-const { Query: pizzaQueries, Mutation: pizzaMutations } = pizzaResolvers;
+const { Query: pokeTeamQueries, Mutation: pokeTeamMutations } = pokeTeamResolvers;
 
 const resolvers = {
   Query: {
-    ...pizzaQueries,
+    ...pokeTeamQueries,
   },
   Mutation: {
-    ...pizzaMutations
+    ...pokeTeamMutations
   }
 };
 

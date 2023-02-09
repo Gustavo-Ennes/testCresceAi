@@ -27,7 +27,7 @@ const server = new ApolloServer({
 })();
 
 startStandaloneServer(server, {
-  listen: { port: 3000 },
+  listen: { port: 3000},
 });
 
 // TODO Adjust scripts to dist folder not to be added in git changes
