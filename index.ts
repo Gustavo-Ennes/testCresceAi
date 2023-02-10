@@ -1,16 +1,9 @@
-import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import dotenv from "dotenv";
 dotenv.config();
 
 import { sequelize } from "./src/database/database";
-import { typeDefs } from "./src/typedefs";
-import { resolvers } from "./src/resolvers";
-
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-});
+import { server } from "./app";
 
 // Passing an ApolloServer instance to the `startStandaloneServer` function:
 //  1. creates an Express app
@@ -27,7 +20,7 @@ const server = new ApolloServer({
 })();
 
 startStandaloneServer(server, {
-  listen: { port: 3000},
+  listen: { port: 3000 },
 });
 
 // TODO Adjust scripts to dist folder not to be added in git changes
