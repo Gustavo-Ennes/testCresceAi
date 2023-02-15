@@ -35,7 +35,3 @@ To start the development server, run the following command:
 
 This will start a development server at http://localhost:3000/ where you can do graphql stuff in `/graphql`.
 
-## License
-
-This project is licensed under the [LICENSE NAME HERE] license. See the [LICENSE.md](LICENSE.md) file for details.
-
