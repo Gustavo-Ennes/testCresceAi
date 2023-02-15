@@ -8,7 +8,7 @@ To get started with this project, first you will need to have Docker and Node.js
 
 ### Running Postgres with Docker
 
-To run the PostgreSQL database for this project, use the following command:
+To run the PostgreSQL database for this project, use the following command(`.env.dev` to create de .env file)
 
 `docker run --name postgres -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres`
 
@@ -34,4 +34,3 @@ To start the development server, run the following command:
 `npm start`
 
 This will start a development server at http://localhost:3000/ where you can do graphql stuff in `/graphql`.
-
